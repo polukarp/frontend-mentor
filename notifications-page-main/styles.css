@@ -1,0 +1,122 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: hsl(210deg, 60%, 98%);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 0 40px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 25px rgb(197, 187, 187);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.header h1 {
+  font-size: 1.5em;
+  word-spacing: 5px;
+}
+.header__count {
+  background-color: hsl(219deg, 85%, 26%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 2px 13px;
+  border-radius: 7px;
+  font-size: 0.9em;
+}
+.header__read {
+  font-size: 1em;
+  color: hsl(219deg, 12%, 42%);
+  cursor: pointer;
+}
+
+.notifications {
+  padding-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
+}
+.notifications .notification {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 14px 20px;
+  flex-wrap: wrap;
+  color: hsl(219deg, 12%, 42%);
+}
+.notifications .notification img {
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.notifications .notification__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.notifications .notification__content {
+  flex: 1;
+}
+.notifications .notification__time {
+  font-size: 15;
+  display: block;
+  color: hsl(219deg, 14%, 63%);
+}
+.notifications .notification__name {
+  color: hsl(224deg, 21%, 14%);
+  font-weight: 800;
+  margin-right: 3px;
+}
+.notifications .notification .message {
+  border: 1px solid hsl(205deg, 33%, 90%);
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.unread {
+  background-color: hsl(211deg, 68%, 94%);
+}
+.unread ::after {
+  content: "";
+  background-color: hsl(1deg, 90%, 64%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.group-color {
+  color: hsl(219deg, 85%, 26%);
+  font-weight: 800;
+}
+
+.post-color {
+  color: hsl(219deg, 12%, 42%);
+  font-weight: 800;
+}/*# sourceMappingURL=styles.css.map */
