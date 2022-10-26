@@ -54,7 +54,9 @@ body {
 }
 .card__image {
     overflow: hidden;
+    
     img {
+        transition: all .35s ease-in;
         max-width: 100%;
         height: auto;
         @media (min-width: $medium) {
@@ -64,8 +66,7 @@ body {
         }
 
         &:hover {
-            -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	            animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            transform: scale(1.5);
         }
     }
     @media (min-width: $medium) {

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  min-height: 100vh;
+}
+body main {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+}
+
+.bg-blur {
+  width: 100%;
+  height: auto;
+  background-image: url("images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.card {
+  color: hsl(0deg, 0%, 100%);
+  background-image: url("images/bg-card-front.png");
+  background-repeat: no-repeat;
+  display: flex;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+$mobile: 325px;
+$desktop: 800px;
+
+$active-input-border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+$red-input-errors: hsl(0, 100%, 66%);
+
+$white: hsl(0, 0%, 100%);
+$light-grayish-violet: hsl(270, 3%, 87%);
+$dark-grayish-violet: hsl(279, 6%, 55%);
+$very-dark-violet: hsl(278, 68%, 11%);
+
+$fz-regular: 18px;
+
+
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    main {
+        display: flex;
+        flex-direction: row;
+        font-size: $fz-regular;
+    }
+}
+
+.bg-blur {
+    width: 100%;
+    height: auto;
+    background-image: url('images/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    position: relative;
+}
+.card {
+    color: $white;
+    background-image: url('images/bg-card-front.png') ;
+    background-repeat: no-repeat;
+    display: flex;
+
+}
+.card__down {
+}
+.card__holder {
+}
+.card__expiration {
+}
+.main-info {
+}
+.date {
+}
+.btn {
+}
+.action {
+}
