@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Frontend Mentor | Expenses chart component</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div role="contentinfo" class="wrapper">
+        <div class="balance">
+          <div class="balance__info">
+            <h1>My balance</h1>
+            <span class="balance__amount"> $921.48 </span>
+          </div>
+          <svg class="balance__logo" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <circle fill="#382314" cx="48" cy="24" r="24" />
+              <circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23" />
+            </g>
+          </svg>
+        </div>
+        <div class="chart">
+          <h2 class="chart__title">Spending - Last 7 days</h2>
+          <div class="chart__visualisation"></div>
+          <div class="chart__summary">
+            <div class="summary__total-section">
+              <h3>Total this month</h3>
+              <span class="summary__total-price">$478.33</span>
+            </div>
+            <div class="summary__change">
+              <h3>+2.4%</h3>
+              <span>from last month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        const columnHeightScale = 3;
+
+        $(document).ready(function () {
+          function getMax(arr, prop) {
+            let max;
+            for (var i = 0; i < arr.length; i++) {
+              if (max == null || parseInt(arr[i][prop]) > parseInt(max[prop])) max = arr[i];
+            }
+            return max;
+          }
+
+          $.getJSON('./data.json', function (data) {
+            var items = [];
+            const max = getMax(data, 'amount').amount;
+            console.log(max);
+            $.each(data, function (key, val) {
+              items.push(
+                `<div class="chart__item">
+                  <div color="${
+                    val.amount === max ? 'max' : ''
+                  }" class="chart__bar" style="height:${val.amount * columnHeightScale}px"></div>
+                <span class="chart__day">${val.day}</span>
+                </div>`,
+              );
+            });
+            $('<ul/>', {
+              class: 'chart__list',
+              html: items.join(''),
+            }).appendTo('.chart__visualisation');
+          });
+        });
+      </script>
+    </main>
+  </body>
+</html>
