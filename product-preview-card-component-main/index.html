@@ -9,29 +9,41 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Frontend Mentor | Product preview card component</title>
   </head>
+
+  <script></script>
+
   <body>
-    <div class="wrapper">
-      <div class="card">
-        <div class="card__image">
-          <img src="./images/image-product-mobile.jpg" alt="product img" />
-        </div>
-        <div class="card__info">
-          <div class="card__tag">perfume</div>
-          <h1 class="card__title">Gabrielle Essence Eau De Parfum</h1>
-          <p class="card__description">
-            A floral, solar and voluptuous interpretation composed by Olivier Polge,
-            Perfumer-Creator for the House of CHANEL.
-          </p>
-          <div class="card__price">
-            <h2 class="price-current">$149.99</h2>
-            <span class="price-before">$169.99</span>
+    <main>
+      <div class="wrapper">
+        <article class="card slide-in-elliptic-top-fwd">
+          <div class="card__image">
+            <picture>
+              <source media="(min-width: 600px)" srcset="./images/image-product-desktop.jpg" />
+              <img
+                id="picture"
+                src="./images/image-product-mobile.jpg"
+                alt="Photo of a perfume bottle"
+              />
+            </picture>
           </div>
-          <button class="btn action">
-            <img src="./images/icon-cart.svg" id="cart" />
-            Add to Cart
-          </button>
-        </div>
+          <div class="card__info">
+            <div class="card__tag">perfume</div>
+            <h1 class="card__title">Gabrielle Essence Eau De Parfum</h1>
+            <p class="card__description">
+              A floral, solar and voluptuous interpretation composed by Olivier Polge,
+              Perfumer-Creator for the House of CHANEL.
+            </p>
+            <div class="card__price">
+              <h2 class="price-current">$149.99</h2>
+              <span class="price-before">$169.99</span>
+            </div>
+            <button class="btn action">
+              <img src="./images/icon-cart.svg" id="cart" />
+              Add to Cart
+            </button>
+          </div>
+        </article>
       </div>
-    </div>
+    </main>
   </body>
 </html>
